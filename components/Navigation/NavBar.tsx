@@ -1,5 +1,4 @@
-import NavLink from '@components/Navigation/NavLink';
-import NavMenu from '@components/Navigation/NavMenu';
+import NavMenu from './NavMenu';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,7 +7,13 @@ const NavBar = () => {
     <nav className="bg-gray-950 text-white">
       <div className="container flex justify-between space-x-4 items-center">
         <Link href="/">
-          <Image src="/logo.svg" alt="My Space Logo" width={80} height={20} />
+          <Image
+            className="hover:scale-110 transition"
+            src="/logo.svg"
+            alt="My Space Logo"
+            width={80}
+            height={20}
+          />
         </Link>
         <div>
           <NavMenu />

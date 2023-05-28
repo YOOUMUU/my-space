@@ -15,7 +15,7 @@ const NavLink = ({ href, children }: Props) => {
   return (
     <Link
       href={href}
-      className={`rounded px-4 py-2 sm:px-4 sm:py-3 font-medium ${
+      className={`transition rounded px-4 py-2 sm:px-4 sm:py-3 font-medium ${
         isActive
           ? ' text-gray-950 bg-white'
           : ' sm:hover:text-gray-950 sm:hover:bg-white'
