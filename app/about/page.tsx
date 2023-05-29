@@ -1,7 +1,5 @@
-export const dynamic = 'force-static';
-
 import { Metadata } from 'next';
-import { getServerSession } from 'next-auth/next';
+import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
@@ -9,11 +7,11 @@ export const metadata: Metadata = {
   description: 'A person who loves to learn new things',
 };
 
-const AboutPage = async () => {
-  const session = await getServerSession();
+const AboutPage = () => {
+  const session = getServerSession();
 
   // if (!session) {
-  //   return <p>You must be signed in...</p>
+  //   return <p>You must be signed in...</p>;
   // }
 
   if (!session) {
