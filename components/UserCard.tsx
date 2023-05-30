@@ -20,7 +20,7 @@ const UserCard = ({ id, name, email, image }: Props) => {
         <Link href={`/users/${id}`}>
           <h3 className="text-lg mt-2 font-bold">{name}</h3>
         </Link>
-        <p>{email ? `email:${email}` : ''}</p>
+        <p>{email ? `Email: ${email}` : ''}</p>
       </div>
     </div>
   );
