@@ -7,6 +7,10 @@ import Link from 'next/link';
 export const SignInButton = () => {
   const { data: session, status } = useSession();
 
+  if (status === 'loading') {
+    return <p>User Loging...</p>;
+  }
+
   if (status === 'authenticated') {
     return (
       <>

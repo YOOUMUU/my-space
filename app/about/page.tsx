@@ -1,3 +1,4 @@
+import { authOptions } from '@app/api/auth/[...nextauth]/route';
 import { Metadata } from 'next';
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
@@ -7,8 +8,8 @@ export const metadata: Metadata = {
   description: 'A person who loves to learn new things',
 };
 
-const AboutPage = () => {
-  const session = getServerSession();
+const AboutPage = async () => {
+  const session = await getServerSession(authOptions);
 
   // if (!session) {
   //   return <p>You must be signed in...</p>;

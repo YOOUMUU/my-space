@@ -1,6 +1,5 @@
 import { prisma } from '@lib/prisma';
 import { Metadata } from 'next';
-import { use } from 'react';
 
 interface Props {
   params: {
