@@ -21,9 +21,13 @@ export default function RootLayout({
     <AuthProvider>
       <html lang="en">
         <body className={inter.className}>
-          <NavBar />
-          {children}
-          <Footer />
+          <div className="h-screen flex flex-col justify-between">
+            <div>
+              <NavBar />
+              {children}
+            </div>
+            <Footer />
+          </div>
         </body>
       </html>
     </AuthProvider>
