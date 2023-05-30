@@ -6,7 +6,7 @@ const NavLinkList = () => {
     <div className="flex items-center">
       <NavLink href="/about">About</NavLink>
       <NavLink href="/blog">Notes</NavLink>
-      <NavLink href="/user">Users</NavLink>
+      <NavLink href="/users">Users</NavLink>
       <SignInButton />
     </div>
   );
