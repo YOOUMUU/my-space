@@ -1,3 +1,4 @@
+import FollowButton from '@components/FollowButton/FollowButton';
 import { prisma } from '@lib/prisma';
 import { Metadata } from 'next';
 
@@ -21,6 +22,9 @@ export default async function UserProfile({ params }: Props) {
       <h1 className="title font-bold">{name}</h1>
       <img src={image ?? '/mememan.webp'} alt={`${name}'s profile picture`} />
       <p className="mt-5 text-md font-medium">{bio}</p>
+
+      {/* @ts-expect-error Server Component */}
+      <FollowButton targetUserId={params.id} />
     </div>
   );
 }
